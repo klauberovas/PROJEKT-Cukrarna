@@ -62,15 +62,21 @@ h3{
 	font-family: 'Playfair Display', serif;
 }
 
-/* --- Nastaveni LOGA a MENU--- */
-.obsah{
-	display: flex;
+/*--- Společné vlastnosti pro sekce---*/
+.container{
 	max-width: 1100px;
 	margin: auto;
 }
 
+.obsah{
+	display: flex;
+}
+
+/* --- Nastaveni LOGA a MENU--- */
+
 .hlavicka{
 	justify-content: space-between;
+	display: flex;
 }
 
 .logo{
@@ -96,11 +102,6 @@ a:hover{
 
 
 /*---Nastaveni HERO sekce--- */
-.obal-hero{
-	padding-right: 40%;
-	max-width: 1100px;
-	margin: auto;
-}
 
 .hero{
 	background-image: url(images/cupcake.jpg);
@@ -119,11 +120,20 @@ h1{
 	margin: 0;
 }
 
-/*--- Nastaveni sekce Vítejte---*/
+h1,
+.hero p{
+	padding-right: 40%;
+}
 
+/*--- Nastaveni sekce Vítejte---*/
 
 .levy{
 	padding-right: 30px;
+}
+
+.sloupec{
+	flex-basis: 50%;
+	flex-shrink: 0;
 }
 
 .tlacitko{
@@ -136,27 +146,31 @@ h1{
 	display: inline-block;
 }
 
+a:hover{
+	background-color: #d2567d;
+}
+
 /*--- Nastavení Dnešní nabídka---*/
 
 .nabidka{
 	background-color: #f0f0f0;
+	margin: 0;
 }
 
 .foto{
 	max-width: 100%;
 }
 
-h3{
-	color: #3e606b;
+h2{
+	margin-top: 0;
 }
 
-.dortiky{
-	max-width: 1100px;
-	margin: auto;
+h3{
+	color: #3e606b;
+	text-align: center;
 }
 
 .produkty{
-	display: flex;
 	gap: 30px;
 	align-items: center;
 }
@@ -168,10 +182,16 @@ h3{
 .produkt{
 	background-color: white;
 	flex-basis: 25%;
-	text-align: center;
 	border-radius: 5px;
+	
+}
+.produkt p{
+	padding: 0 20px 20px 20px;
 }
 
+span{
+	white-space: nowrap;
+}
 
 /* ---Pečení---*/
 
@@ -182,3 +202,7 @@ footer{
 	background-color: #303339;
 	text-align: center;
 }
+.container p{
+	margin: 0;
+}
+
