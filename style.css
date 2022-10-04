@@ -5,19 +5,19 @@ html { box-sizing: border-box; }
 
 /*
 	Poznámky:
-	- maximální šířka obsahu uvnitř sekcí je 1100px
-	- "pruh" s obsahem obsah je vycentrovaný na stránce
-	- všechny sekce mají nahoře a dole padding 80px
-	- kromě hlavičky a patičky, které mají jen 30px
+	- maximální šířka obsahu uvnitř sekcí je 1100px HOTOVO
+	- "pruh" s obsahem obsah je vycentrovaný na stránce HOTOVO
+	- všechny sekce mají nahoře a dole padding 80px HOTOVO
+	- kromě hlavičky a patičky, které mají jen 30px HOTOVO
 	- nadpisy jsou fontem Playfair Display, tučně
 	- veškerý další text na stránce fontem Lora
-	- výchozí velikost textu na stránce je 18px, řádkování 1.5
+	- výchozí velikost textu na stránce je 18px, řádkování 1.5 HOTOVO
 
 	Velikosti nadpisů:
-	h1 - 52px  (nadpis v horní Hero sekci s cupcakem)
-	h2 - 36px  (nadpisy v dalších sekcích)
-	h3 - 18px  (název produktu v Dnešní nabídce)
-	Nadpisy mají řádkování jen 1.25
+	h1 - 52px  (nadpis v horní Hero sekci s cupcakem) HOTOVO
+	h2 - 36px  (nadpisy v dalších sekcích) HOTOVO
+	h3 - 18px  (název produktu v Dnešní nabídce) HOTOVO v ramci body
+	Nadpisy mají řádkování jen 1.25 HOTOVO
 
 	Barvy:
 	#f195b2		růžová - tlačítka a zvýraznění
@@ -28,8 +28,157 @@ html { box-sizing: border-box; }
 	#303339		tmavé pozadí patičky
 */
 
+/* --- Obecné vlastnosti---*/
 
 body {
 	margin: 0;
+	font-size: 18px;
+	line-height: 1.5;
+	font-family: 'Lora', serif;
 }
 
+section{
+	padding: 80px 0;
+}
+
+header,
+footer{
+	padding: 30px 0;
+}
+
+h1{
+	font-size: 52px;
+}
+
+h2{
+	font-size: 32px;
+	color:#3e606b;
+}
+
+h1,
+h2,
+h3{
+	line-height: 1.25;
+	font-family: 'Playfair Display', serif;
+}
+
+/* --- Nastaveni LOGA a MENU--- */
+.obsah{
+	display: flex;
+	max-width: 1100px;
+	margin: auto;
+}
+
+.hlavicka{
+	justify-content: space-between;
+}
+
+.logo{
+	width: 170px;
+}
+
+.menu{
+	list-style-type: none;
+	display: flex;
+}
+
+li a{
+	text-decoration: none;
+	padding: 10px 15px;
+	color: black;
+	border-radius: 20px;
+}
+
+a:hover{
+	background-color:#f195b2;
+	color: white;
+}
+
+
+/*---Nastaveni HERO sekce--- */
+.obal-hero{
+	padding-right: 40%;
+	max-width: 1100px;
+	margin: auto;
+}
+
+.hero{
+	background-image: url(images/cupcake.jpg);
+	background-size: cover;
+	background-position: center;
+	color: white;
+}
+
+.hero p{
+	font-size: 24px;
+	font-style: italic;
+	margin-bottom: 0;
+}
+
+h1{
+	margin: 0;
+}
+
+/*--- Nastaveni sekce Vítejte---*/
+
+
+.levy{
+	padding-right: 30px;
+}
+
+.tlacitko{
+	background-color: #f195b2;
+	text-decoration: none;
+	color: white;
+	border-radius:30px;
+	padding: 15px 40px;
+	margin-top: 20px;
+	display: inline-block;
+}
+
+/*--- Nastavení Dnešní nabídka---*/
+
+.nabidka{
+	background-color: #f0f0f0;
+}
+
+.foto{
+	max-width: 100%;
+}
+
+h3{
+	color: #3e606b;
+}
+
+.dortiky{
+	max-width: 1100px;
+	margin: auto;
+}
+
+.produkty{
+	display: flex;
+	gap: 30px;
+	align-items: center;
+}
+
+.uvod{
+	flex-basis: 100%;
+}
+
+.produkt{
+	background-color: white;
+	flex-basis: 25%;
+	text-align: center;
+	border-radius: 5px;
+}
+
+
+/* ---Pečení---*/
+
+/*--- Patička---*/
+
+footer{
+	color: white;
+	background-color: #303339;
+	text-align: center;
+}
